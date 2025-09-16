@@ -8,22 +8,22 @@ services:
       - db
     environment:
       WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: wp_user
-      WORDPRESS_DB_PASSWORD: wp_pass
+      WORDPRESS_DB_USER: fin_user
+      WORDPRESS_DB_PASSWORD: fin_pass
       WORDPRESS_DB_NAME: wordpress
       WORDPRESS_DEBUG: 1
     links:
       - db
     volumes:
       - wordpress:/var/www/html
-      - ..:/home/wpcli
+      - ..:/home/fincli
  
   db:
     image: mariadb:10
     environment:
       MYSQL_DATABASE: wordpress
-      MYSQL_USER: wp_user
-      MYSQL_PASSWORD: wp_pass
+      MYSQL_USER: fin_user
+      MYSQL_PASSWORD: fin_pass
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     ports:
       - 3306:3306

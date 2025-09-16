@@ -1,5 +1,5 @@
 {
-	"name": "Workshop - Getting Started with WP-CLI",
+	"name": "Workshop - Getting Started with FIN-CLI",
 
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "wordpress",
@@ -25,6 +25,6 @@
 	],
 
 	// Sets up WordPress on container start.
-	"postCreateCommand": "/home/wpcli/.devcontainer/wp-setup.sh",
-	"remoteUser": "wpcli"
+	"postCreateCommand": "/home/fincli/.devcontainer/fin-setup.sh",
+	"remoteUser": "fincli"
 }
